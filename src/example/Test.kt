@@ -1,3 +1,5 @@
+package example
+
 var age: Int = 18
 set(value) {
     if ((value > 0) and (value < 110))
@@ -6,17 +8,17 @@ set(value) {
 
 data class Item(val id: Int, val name: String, val quantity: Int){
     override fun toString(): String {
-        return "Item (id=$id, name='$name', quantity=$quantity)"
+        return "example.Item (id=$id, name='$name', quantity=$quantity)"
     }
 }
 
 fun main(){
     /*
-    println(age)
-    age = 45
-    println(age)
-    age = -345
-    println(age)
+    println(example.age)
+    example.age = 45
+    println(example.age)
+    example.age = -345
+    println(example.age)
 
 
     println(sword.toString())

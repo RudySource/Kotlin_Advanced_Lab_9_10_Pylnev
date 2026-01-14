@@ -1,3 +1,5 @@
+package characters
+
 class OutpostWorker(val name: String) {
     var maxEnergy: Int = 100
         private set
@@ -36,7 +38,7 @@ abstract class Human(val name: String){
 }
 class Person(name: String, override var age: Int)  : Human(name){
     override fun hello(){
-        println("My name's $name!. My age is $age")
+        println("My name's $name!. My example.age is $age")
     }
 }
 
@@ -53,7 +55,7 @@ class Rectangle(val width: Double, val height: Double): Figure() {
     }
 }
 fun main() {
-   /* val worker = OutpostWorker("Алексей")
+   /* val worker = characters.OutpostWorker("Алексей")
     println("Энергия: ${worker.energy}")
     println("Настроение: ${worker.mood}")
     worker.work()
@@ -66,7 +68,7 @@ fun main() {
 //    worker.level = 5
     worker.levelUp()*/
     val denis: Person = Person("Denis", 2)
-//    val pavel: Human = Human("Pavel")
+//    val pavel: characters.Human = characters.Human("Pavel")
     val maksim: Human = Person("Maksim", 3)
     denis.hello()
     maksim.hello()

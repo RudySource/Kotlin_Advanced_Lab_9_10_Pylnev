@@ -1,3 +1,5 @@
+package example
+
 interface Movable{
     var speed: Int
     val model: String
@@ -10,17 +12,17 @@ interface Movable{
 class Car(override val model: String, override val number: String): Movable{
     override var speed = 60
     override fun move() {
-        println("Car speed $speed")
+        println("example.Car speed $speed")
     }
-    override fun stop() = println("Car is stopping...")
+    override fun stop() = println("example.Car is stopping...")
 }
 
 class Aircraft(override val model: String, override val number: String): Movable{
     override var speed = 600
     override fun move() {
-        println("Fly Aircraft speed $speed")
+        println("Fly example.Aircraft speed $speed")
     }
-    override fun stop() = println("Fly Aircraft is stopping...")
+    override fun stop() = println("Fly example.Aircraft is stopping...")
 }
 
 fun travel(obj: Movable) = obj.move()
@@ -53,21 +55,21 @@ class MediaPlayer: VideoPlayable, AudioPlayable{
     }
 }
 fun main() {
-    /* val car = Car()
-    val aircraft = Aircraft()
-    travel(aircraft)
-    travel(car)
+    /* val car = example.Car()
+    val aircraft = example.Aircraft()
+    example.travel(aircraft)
+    example.travel(car)
 
-    val car: Movable = Car()
-    val aircraft: Movable = Aircraft()
-    val pavel = WorkingStudent("Pavel")
+    val car: example.Movable = example.Car()
+    val aircraft: example.Movable = example.Aircraft()
+    val pavel = example.WorkingStudent("Pavel")
     car.move()
     car.stop()
     aircraft.move()
     aircraft.stop()
      */
-//    val car = Car("Lada", "123LAD")
-//    val aircraft = Car("Boeing", "737")
+//    val car = example.Car("Lada", "123LAD")
+//    val aircraft = example.Car("Boeing", "737")
 //    car.move()
 
     val player = MediaPlayer()
