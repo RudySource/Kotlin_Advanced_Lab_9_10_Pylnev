@@ -29,9 +29,31 @@ class OutpostWorker(val name: String) {
     }
 
 }
+abstract class Human(val name: String){
+    abstract var age: Int
+    abstract fun hello()
 
+}
+class Person(name: String, override var age: Int)  : Human(name){
+    override fun hello(){
+        println("My name's $name!. My age is $age")
+    }
+}
+
+abstract class Figure {
+    abstract fun perimeter(): Double
+    abstract fun area(): Double
+}
+class Rectangle(val width: Double, val height: Double): Figure() {
+    override fun perimeter(): Double{
+        return 2* (width * height)
+    }
+    override fun area(): Double {
+        return width * height
+    }
+}
 fun main() {
-    val worker = OutpostWorker("Алексей")
+   /* val worker = OutpostWorker("Алексей")
     println("Энергия: ${worker.energy}")
     println("Настроение: ${worker.mood}")
     worker.work()
@@ -42,6 +64,11 @@ fun main() {
     worker.rest()
     worker.energy = 150
 //    worker.level = 5
-    worker.levelUp()
+    worker.levelUp()*/
+    val denis: Person = Person("Denis", 2)
+//    val pavel: Human = Human("Pavel")
+    val maksim: Human = Person("Maksim", 3)
+    denis.hello()
+    maksim.hello()
 }
 
