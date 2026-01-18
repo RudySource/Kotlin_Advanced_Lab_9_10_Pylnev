@@ -52,8 +52,8 @@ sealed-class ModuleResult {
 }
 ```
 
-### Object в Kotlin
----
+## Object в Kotlin
+
 **object** — это специальная конструкция Kotlin, которая создаёт единственный экземпляр класса (Singleton).
 
 Особенности:
