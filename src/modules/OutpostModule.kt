@@ -8,6 +8,6 @@ abstract class OutpostModule(val name: String, var level: Int = 1) {
         println("$name улучшен до уровня $level")
     }
 
-    abstract fun performAction(manager: ResourceManager)
-
+    abstract fun performAction(manager: ResourceManager) : ModuleResult
 }
+
